@@ -1,17 +1,22 @@
+import React from 'react'
+
 import './Summary.css'
-import { Box, Grid, Paper, Avatar } from '@material-ui/core'
+import { Box, Grid, Paper, Avatar, Typography } from '@material-ui/core'
+
+import profile from '../../res/profile.png'
 
 const Summary = () => {
     return (
-        <Box className="section">
-            <Grid container direction="row" justify="center" alignItems="center" spacing={1}>
-                <Grid item md>
-                    <Paper elevation={4}>
-                        <Avatar alt="Amritpal Shokar" src="./profile-pic.png" />
+        <Box padding="1em" className="section">
+            <Typography align="center" gutterBottom variant="h2" className="title">Summary</Typography>
+            <Grid container direction="column" justify="flex-end" alignItems="center" spacing={7}>
+                <Grid item xs>
+                    <Paper elevation={4} className="pictureBacking">
+                        <img alt="Amritpal Shokar" srcSet={profile} className="picture"/>
                     </Paper>
                 </Grid>
-                <Grid item md>
-                    <Paper elevation={4}>
+                <Grid item md className="summaryBacking">
+                    <Paper elevation={4} className="summary">
                         Nunc leo felis, sollicitudin vitae lorem at, iaculis vehicula lacus. Cras rutrum nulla 
                         non mauris vestibulum, sit amet fringilla dui porttitor. Aenean molestie at felis ut 
                         porttitor. In vel semper justo. Nulla vitae purus eget massa maximus porta. Cras 
