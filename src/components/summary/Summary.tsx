@@ -1,5 +1,5 @@
 import styles from './Summary.module.css'
-import { Box, Grid, Paper, Typography, makeStyles, createStyles, Theme } from '@material-ui/core'
+import { Box, Grid, Paper, Avatar, Typography, makeStyles, createStyles, Theme } from '@material-ui/core'
 
 import profile from '../../res/profile.png'
 
@@ -7,6 +7,10 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     picturePaper: {
       backgroundColor: '#90EE90'
+    },
+    picture: {
+        height: '300px',
+        width: '300px'
     },
     summaryPaper: {
         backgroundColor: '#90EE90',
@@ -24,8 +28,8 @@ const Summary = () => {
             <Typography align="center" gutterBottom variant="h2" className={styles["title"]}>Summary</Typography>
             <Grid container direction="column" justify="flex-end" alignItems="center" spacing={7}>
                 <Grid item xs>
-                    <Paper elevation={4} className={classes.picturePaper}>
-                        <img alt="Amritpal Shokar" srcSet={profile} className={styles["picture"]}/>
+                    <Paper elevation={8} className={classes.picturePaper}>
+                        <Avatar alt="AS" src={profile} variant="square" className={classes.picture}></Avatar>
                     </Paper>
                 </Grid>
                 <Grid item md className={styles["summaryBacking"]}>
