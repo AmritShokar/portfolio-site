@@ -10,8 +10,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     summaryPaper: {
         backgroundColor: '#90EE90',
-        marginLeft: '8em',
-        marginRight: '8em'
+        marginLeft: '10em',
+        marginRight: '10em'
     }
   }),
 );

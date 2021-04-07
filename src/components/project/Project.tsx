@@ -3,8 +3,15 @@ import { Box, Grid, Paper, Typography, makeStyles, createStyles, Theme } from '@
 
 const Project = () => {
     return (
-        <Box>
-            Hi
+        <Box className="section">
+            <Grid container>
+                <Grid item>
+                    Hi
+                </Grid>
+                <Grid item>
+                    Ho
+                </Grid>
+            </Grid>
         </Box>
     )
 }
