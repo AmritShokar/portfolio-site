@@ -20,7 +20,7 @@ const Summary = () => {
     const classes = useStyles();
 
     return (
-        <Box padding="1em" className={styles["section"]}>
+        <Box className={styles["section"]}>
             <Typography align="center" gutterBottom variant="h2" className={styles["title"]}>Summary</Typography>
             <Grid container direction="column" justify="flex-end" alignItems="center" spacing={7}>
                 <Grid item xs>
