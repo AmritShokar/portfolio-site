@@ -7,20 +7,7 @@
     padding: 0.5em;
 }
 
-.pictureBacking {
-    background-color: lightgreen;
-}
-
 .picture {
     height: 20em;
     border-radius: 0em;
-}
-
-.summaryBacking {
-    margin-left: 8em;
-    margin-right: 8em;
-}
-
-.summary {
-    background-color: lightgreen;
 }

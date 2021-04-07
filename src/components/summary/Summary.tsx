@@ -1,22 +1,35 @@
-import React from 'react'
-
 import './Summary.css'
-import { Box, Grid, Paper, Avatar, Typography } from '@material-ui/core'
+import { Box, Grid, Paper, Typography, makeStyles, createStyles, Theme } from '@material-ui/core'
 
 import profile from '../../res/profile.png'
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    picturePaper: {
+      backgroundColor: '#90EE90'
+    },
+    summaryPaper: {
+        backgroundColor: '#90EE90',
+        marginLeft: '8em',
+        marginRight: '8em'
+    }
+  }),
+);
+
 const Summary = () => {
+    const classes = useStyles();
+
     return (
         <Box padding="1em" className="section">
             <Typography align="center" gutterBottom variant="h2" className="title">Summary</Typography>
             <Grid container direction="column" justify="flex-end" alignItems="center" spacing={7}>
                 <Grid item xs>
-                    <Paper elevation={4} className="pictureBacking">
+                    <Paper elevation={4} className={classes.picturePaper}>
                         <img alt="Amritpal Shokar" srcSet={profile} className="picture"/>
                     </Paper>
                 </Grid>
                 <Grid item md className="summaryBacking">
-                    <Paper elevation={4} className="summary">
+                    <Paper elevation={4} className={classes.summaryPaper}>
                         Nunc leo felis, sollicitudin vitae lorem at, iaculis vehicula lacus. Cras rutrum nulla 
                         non mauris vestibulum, sit amet fringilla dui porttitor. Aenean molestie at felis ut 
                         porttitor. In vel semper justo. Nulla vitae purus eget massa maximus porta. Cras 
