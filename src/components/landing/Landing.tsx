@@ -1,19 +1,26 @@
-import './Landing.css'
-import {AppBar, Toolbar, Button, Box} from '@material-ui/core'
+import styles from './Landing.module.css'
+import {AppBar, Toolbar, Button, Box, makeStyles, createStyles, Theme} from '@material-ui/core'
 import { Typography } from '@material-ui/core'
 
-const Landing = () => {
-    return (
-        <div className="background">
-            <Box className="header">
-                <Typography className="logo">Amritpal's Portfolio</Typography>
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    AppBar: {
+        backgroundColor: 'transparent',
+        boxShadow: '0px 0px 0px 0px',
+        alignItems: 'flex-end',
+        flex: 2
+    }
+  }),
+);
 
-                <AppBar position="static" style={{
-                    backgroundColor: 'transparent',
-                    boxShadow: '0px 0px 0px 0px',
-                    alignItems: 'flex-end',
-                    flex: 2
-                }}>
+const Landing = () => {
+    const classes = useStyles();
+    return (
+        <div className={styles["background"]}>
+            <Box className="header">
+                <Typography className={styles["logo"]}>Amritpal's Portfolio</Typography>
+
+                <AppBar position="static" className={classes.AppBar}>
                     <Toolbar>
                         <Button>Home</Button>
                         <Button>Summary</Button>

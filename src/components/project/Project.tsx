@@ -1,9 +1,9 @@
-import './Project.css'
+import styles from './Project.module.css'
 import { Box, Grid, Paper, Typography, makeStyles, createStyles, Theme } from '@material-ui/core'
 
 const Project = () => {
     return (
-        <Box className="section">
+        <Box className={styles["section"]}>
             <Grid container>
                 <Grid item>
                     Hi

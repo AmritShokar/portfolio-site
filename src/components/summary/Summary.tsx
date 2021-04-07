@@ -1,4 +1,4 @@
-import './Summary.css'
+import styles from './Summary.module.css'
 import { Box, Grid, Paper, Typography, makeStyles, createStyles, Theme } from '@material-ui/core'
 
 import profile from '../../res/profile.png'
@@ -20,15 +20,15 @@ const Summary = () => {
     const classes = useStyles();
 
     return (
-        <Box padding="1em" className="section">
-            <Typography align="center" gutterBottom variant="h2" className="title">Summary</Typography>
+        <Box padding="1em" className={styles["section"]}>
+            <Typography align="center" gutterBottom variant="h2" className={styles["title"]}>Summary</Typography>
             <Grid container direction="column" justify="flex-end" alignItems="center" spacing={7}>
                 <Grid item xs>
                     <Paper elevation={4} className={classes.picturePaper}>
-                        <img alt="Amritpal Shokar" srcSet={profile} className="picture"/>
+                        <img alt="Amritpal Shokar" srcSet={profile} className={styles["picture"]}/>
                     </Paper>
                 </Grid>
-                <Grid item md className="summaryBacking">
+                <Grid item md className={styles["summaryBacking"]}>
                     <Paper elevation={4} className={classes.summaryPaper}>
                         Nunc leo felis, sollicitudin vitae lorem at, iaculis vehicula lacus. Cras rutrum nulla 
                         non mauris vestibulum, sit amet fringilla dui porttitor. Aenean molestie at felis ut 
