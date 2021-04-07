@@ -4,6 +4,7 @@ import { Box, Grid, Paper, Avatar, Typography, makeStyles, createStyles, Theme, 
 import bridgeApp from '../../res/bridgeApp1.png'
 import yodelmeApp from '../../res/yodelmeApp1.jpg'
 import yodelmeApp2 from '../../res/yodelmeApp2.jpg'
+import komixstreamApp from '../../res/komixstreamApp.png'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -51,14 +52,14 @@ const Project = () => {
                 <Divider className={classes.divider}/>
 
                 <Grid item xs={12} container>
-                    <Grid item xs={6}>
-                        <img alt="yodelme app" src={yodelmeApp} className={styles['projectImage']} />
-                        <img alt="yodelme app" src={yodelmeApp2} className={styles['projectImage']} />
+                    <Grid item xs={2} />
+                    <Grid item xs={4}>
+                        <img alt="komixstream app" src={komixstreamApp} className={styles['projectImage']} />
                     </Grid>
-                    <Grid item xs={1} />
                     <Grid item xs={5}>
                         <Paper elevation={2}>This is a test Number 2</Paper>
                     </Grid>
+                    <Grid item xs={1} />
                 </Grid>
 
             </Grid>
