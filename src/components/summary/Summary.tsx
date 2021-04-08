@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: '#90EE90'
     },
     picture: {
-        height: '300px',
-        width: '300px'
+        height: '17em',
+        width: '15em'
     },
     summaryPaper: {
         backgroundColor: '#90EE90',
