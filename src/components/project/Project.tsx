@@ -53,10 +53,18 @@ const Project = () => {
                             <Typography align="center" gutterBottom variant="h5" className={classes.projectTitle}>The Bridge Services</Typography>
 
                             <ul className={styles['projectList']}>
-                                <li>An iOS mobile app developed using the Google Calendar Api</li>
-                                <li>Also used a firebase account to send push notification to end users</li>
-                                <li>Used to keep track of hosted events intended for children</li>
-                                <li>The admin Google account was used by staff to update events</li>
+                                <li>
+                                    An iOS mobile app developed using the Google Calendar Api
+                                </li>
+                                <li>
+                                    Also used a firebase account to send push notification to end users
+                                </li>
+                                <li>
+                                    Used to keep track of hosted events intended for children
+                                </li>
+                                <li>
+                                    The admin Google account was used by staff to update events
+                                </li>
                             </ul>
 
                         </Paper>
@@ -96,8 +104,10 @@ const Project = () => {
                                     The backend was hosted on an AWS Elastic Beanstalk instance
                                 </li>
                                 <li>
-                                    The app was used by offices to monitor worker statuses. This system was specifically
-                                    aimed towards workers that were placed in potentially hazardous environments
+                                    The app was used by offices to monitor worker statuses
+                                </li>
+                                <li>
+                                    This system was specifically aimed towards workers that were placed in potentially hazardous environments
                                 </li>
                             </ul>
 
@@ -108,12 +118,16 @@ const Project = () => {
 
                 <Divider className={classes.divider}/>
 
-                {/* <Grid item xs={12} container>
-                    <Grid item xs={2} />
-                    <Grid item xs={4}>
-                        <img alt="komixstream app" src={komixstreamApp} className={styles['projectImage']} />
+                <Grid item xs={12} container>
+                    <Grid item md={1}/>
+
+                    <Grid item xs={12} md={3}>
+                        <Avatar alt="komixstream app" variant="square" src={komixstreamApp} className={classes.projectImage} />
                     </Grid>
-                    <Grid item xs={5}>
+
+                    <Grid item md={2} />
+
+                    <Grid item xs={12} md={5}>
                         <Paper elevation={2} className={classes.paper}>
                             <Typography align="center" gutterBottom variant="h5" className={classes.projectTitle}>Komixstream</Typography>
 
@@ -129,14 +143,17 @@ const Project = () => {
                                     Python Flask backend
                                 </li>
                                 <li>
-                                    This app delivered a custom digital comic reading experience to the end-user.
+                                    This app delivered a custom digital comic reading experience to the end-user
+                                </li>
+                                <li>
                                     Exclusive content was procured for readers using the platform
                                 </li>
                             </ul>
+
                         </Paper>
                     </Grid>
-                    <Grid item xs={1} />
-                </Grid> */}
+                    <Grid item md={1}/>
+                </Grid>
 
             </Grid>
         </Box>
