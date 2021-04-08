@@ -38,12 +38,10 @@ const Contact = () => {
                 <Grid item xs={3} sm={2} md={3}/>
 
                 <Grid item xs={9} sm={4} md={3} className={classes.test}>
-                    {/* <img alt="icongeek26" src={letter} className={styles['image']} /> */}
                     <Avatar variant="square" src={letter} className={classes.iconAvatar} />
                 </Grid>
 
                 <Grid item xs={12} sm={4} md={3}>
-                    {/* <img alt="contact" src={contact} className={styles['contactImage']} /> */}
                     <Avatar variant="square" src={contact} className={classes.contactAvatar} />
                 </Grid>
 
