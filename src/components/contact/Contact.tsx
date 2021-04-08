@@ -8,24 +8,16 @@ import contact from '../../res/contact5.png'
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            flexGrow: 1,
             backgroundColor: '#90EE90',
             padding: '5em'
         },
-        typography: { // Delete
-            fontFamily: 'Poppins',
-            fontSize: '2em'
-        },
         iconAvatar: {
-            height: '5em',
-            width: '6em'
+            height: 'auto',
+            width: 'auto'
         },
         contactAvatar: {
             height: 'auto',
             width: 'auto'
-        },
-        test: {
-            align: 'center'
         }
     }),
 );
@@ -35,17 +27,19 @@ const Contact = () => {
     return (
         <Box className={classes.root}>
             <Grid container alignItems="center" justify="center">
-                <Grid item xs={3} sm={2} md={3}/>
+                <Grid item xs={2} md={3}/>
 
-                <Grid item xs={9} sm={4} md={3} className={classes.test}>
+                <Grid item xs={8} md={2}>
                     <Avatar variant="square" src={letter} className={classes.iconAvatar} />
                 </Grid>
 
-                <Grid item xs={12} sm={4} md={3}>
+                <Grid item xs={2} md={1} />
+
+                <Grid item xs={12} md={3}>
                     <Avatar variant="square" src={contact} className={classes.contactAvatar} />
                 </Grid>
 
-                <Grid item xs={12} sm={2} md={3}/>
+                <Grid item md={3}/>
             </Grid>
         </Box>
     )
