@@ -26,13 +26,13 @@ const Summary = () => {
     return (
         <Box className={styles["section"]}>
             <Typography align="center" gutterBottom variant="h2" className={styles["title"]}>Summary</Typography>
-            <Grid container direction="column" justify="flex-end" alignItems="center" spacing={7}>
-                <Grid item xs>
+            <Grid container direction="column" justify="flex-end" alignItems="center" spacing={7} xs={12}>
+                <Grid item xs={12}>
                     <Paper elevation={8} className={classes.picturePaper}>
                         <Avatar alt="AS" src={profile} variant="square" className={classes.picture}></Avatar>
                     </Paper>
                 </Grid>
-                <Grid item md className={styles["summaryBacking"]}>
+                <Grid item xs={12} className={styles["summaryBacking"]}>
                     <Paper elevation={4} className={classes.summaryPaper}>
                         Nunc leo felis, sollicitudin vitae lorem at, iaculis vehicula lacus. Cras rutrum nulla 
                         non mauris vestibulum, sit amet fringilla dui porttitor. Aenean molestie at felis ut 
