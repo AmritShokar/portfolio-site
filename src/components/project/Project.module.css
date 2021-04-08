@@ -7,3 +7,13 @@
     height: 30em;
     margin-right: 1em;
 }
+
+.projectList {
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 2em;
+}
+
+li {
+    padding: 0.5em;
+}

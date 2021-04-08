@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme: Theme) =>
         fontSize: '4em'
     },
     picturePaper: {
-        backgroundColor: '#90EE90',
+        backgroundColor: '#ADD8E6',
         padding: '0.5em'
     },
     picture: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
         width: 'auto'
     },
     summaryPaper: {
-        backgroundColor: '#90EE90',
+        backgroundColor: '#ADD8E6',
         padding: '1.5em',
         marginLeft: '1em',
         marginRight: '1em',
