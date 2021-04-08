@@ -5,8 +5,6 @@ import bridgeApp from '../../res/bridgeApp1.png'
 import yodelmeApp from '../../res/yodelmeApp1.jpg'
 import yodelmeApp2 from '../../res/yodelmeApp2.jpg'
 import komixstreamApp from '../../res/komixstreamApp.png'
-import { lightGreen } from '@material-ui/core/colors'
-import { lightBlue } from '@material-ui/core/colors'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -25,6 +23,11 @@ const useStyles = makeStyles((theme: Theme) =>
     projectTitle: {
         fontFamily: 'Poppins',
         paddingTop: '1em'
+    },
+    projectImage: {
+        height: 'auto',
+        width: 'auto',
+        paddingBottom: '1em'
     }
   }),
 );
@@ -35,15 +38,17 @@ const Project = () => {
     return (
         <Box className={styles["section"]}>
             <Typography align="center" gutterBottom variant="h2" className={classes.title}>Projects</Typography>
-            <Grid container direction="column" spacing={2}>
+            <Grid container direction="column">
 
                 <Grid item xs={12} container>
-                    <Grid item xs={1} />
-                    <Grid item xs={4}>
-                        <img alt="bridge services app" src={bridgeApp} className={styles['projectImage']}/>
+                    <Grid item md={1}/>
+                    <Grid item xs={12} md={4}>
+                        <Avatar alt="bridge services app" variant="square" src={bridgeApp} className={classes.projectImage}/>
                     </Grid>
-                    <Grid item xs={1} />
-                    <Grid item xs={5}>
+
+                    <Grid item md={1}/>
+
+                    <Grid item xs={12} md={5}>
                         <Paper elevation={2} className={classes.paper}>
                             <Typography align="center" gutterBottom variant="h5" className={classes.projectTitle}>The Bridge Services</Typography>
 
@@ -56,18 +61,27 @@ const Project = () => {
 
                         </Paper>
                     </Grid>
-                    <Grid item xs={1} />
+
+                    <Grid item md={1}/>
                 </Grid>
 
                 <Divider className={classes.divider}/>
 
                 <Grid item xs={12} container>
-                    <Grid item xs={6}>
-                        <img alt="yodelme app" src={yodelmeApp} className={styles['projectImage']} />
-                        <img alt="yodelme app" src={yodelmeApp2} className={styles['projectImage']} />
+
+                    <Grid item xs={12} md={3}>
+                        <Avatar alt="yodelme app" variant="square" src={yodelmeApp} className={classes.projectImage} />
                     </Grid>
-                    <Grid item xs={1} />
-                    <Grid item xs={5}>
+
+                    <Grid item md={1}/>
+
+                    <Grid item xs={12} md={3}>
+                        <Avatar alt="yodelme app" variant="square" src={yodelmeApp2} className={classes.projectImage} />
+                    </Grid>
+
+                    <Grid item md={1}/>
+
+                    <Grid item xs={12} md={4}>
                         <Paper elevation={2} className={classes.paper}>
                             <Typography align="center" gutterBottom variant="h5" className={classes.projectTitle}>yodelME</Typography>
 
@@ -89,11 +103,12 @@ const Project = () => {
 
                         </Paper>
                     </Grid>
+
                 </Grid>
 
                 <Divider className={classes.divider}/>
 
-                <Grid item xs={12} container>
+                {/* <Grid item xs={12} container>
                     <Grid item xs={2} />
                     <Grid item xs={4}>
                         <img alt="komixstream app" src={komixstreamApp} className={styles['projectImage']} />
@@ -121,7 +136,7 @@ const Project = () => {
                         </Paper>
                     </Grid>
                     <Grid item xs={1} />
-                </Grid>
+                </Grid> */}
 
             </Grid>
         </Box>
