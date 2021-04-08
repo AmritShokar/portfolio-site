@@ -3,8 +3,7 @@ import styles from './Contact.module.css'
 import { Box, Grid, Typography, makeStyles, createStyles, Theme, Avatar } from '@material-ui/core'
 
 import letter from '../../res/letter.png'
-import contact from '../../res/contact.png'
-import { lightGreen } from '@material-ui/core/colors';
+import contact from '../../res/contact5.png'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -22,8 +21,11 @@ const useStyles = makeStyles((theme: Theme) =>
             width: '6em'
         },
         contactAvatar: {
-            height: '5em',
-            width: '13em'
+            height: 'auto',
+            width: 'auto'
+        },
+        test: {
+            align: 'center'
         }
     }),
 );
@@ -32,17 +34,20 @@ const Contact = () => {
     const classes = useStyles()
     return (
         <Box className={classes.root}>
-            <Grid container alignItems="center" justify="center" style={{ flexGrow: 1 }}>
-                <Grid item xs={12} sm={2} md={4}/>
-                <Grid item xs={12} sm={4} md={2}>
+            <Grid container alignItems="center" justify="center">
+                <Grid item xs={3} sm={2} md={3}/>
+
+                <Grid item xs={9} sm={4} md={3} className={classes.test}>
                     {/* <img alt="icongeek26" src={letter} className={styles['image']} /> */}
                     <Avatar variant="square" src={letter} className={classes.iconAvatar} />
                 </Grid>
-                <Grid item xs={12} sm={4} md={2}>
+
+                <Grid item xs={12} sm={4} md={3}>
                     {/* <img alt="contact" src={contact} className={styles['contactImage']} /> */}
                     <Avatar variant="square" src={contact} className={classes.contactAvatar} />
                 </Grid>
-                <Grid item xs={12} sm={2} md={4}/>
+
+                <Grid item xs={12} sm={2} md={3}/>
             </Grid>
         </Box>
     )
