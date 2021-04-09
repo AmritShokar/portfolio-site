@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     picturePaper: {
         backgroundColor: '#ADD8E6',
-        padding: '0.5em'
+        padding: '0.5em',
+        marginBottom: '1.5em'
     },
     picture: {
         height: 'auto',
@@ -40,7 +41,7 @@ const Summary = () => {
         <Box className={styles["section"]}>
             <Typography align="center" gutterBottom variant="h2" className={classes.title}>Summary</Typography>
 
-            <Grid container direction="column" justify="center" alignItems="center" spacing={2}>
+            <Grid container direction="column" justify="center" alignItems="center">
                 
                 <Grid item xs={1} md={3} />
                 <Grid item xs={10} md={6}>
