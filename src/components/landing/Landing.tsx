@@ -43,7 +43,7 @@ const Landing = ({ onScroll }: any) => {
                                 <Typography variant="body1" className={classes.buttonText}>Summary</Typography>
                             </Button>
                             <Button>
-                                <Typography variant="body1" className={classes.buttonText}>Project</Typography>
+                                <Typography variant="body1" className={classes.buttonText}>Projects</Typography>
                             </Button>
                             <Button onClick={onScroll}>
                                 <Typography variant="body1" className={classes.buttonText}>Contact</Typography>
