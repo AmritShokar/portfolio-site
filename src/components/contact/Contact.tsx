@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
             width: 'auto'
         }
     }),
+    {index: 1}
 );
 
 const Contact = ({ test }: any) => {

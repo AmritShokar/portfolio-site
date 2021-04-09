@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
         paddingBottom: '1em'
     }
   }),
+  {index: 1}
 );
 
 const Project = () => {

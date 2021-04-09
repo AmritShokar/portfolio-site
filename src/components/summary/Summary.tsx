@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
         fontFamily: 'Poppins'
     }
   }),
+  {index: 1}
 );
 
 const Summary = () => {

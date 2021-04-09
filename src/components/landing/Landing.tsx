@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
         fontFamily: 'Ubuntu'
     }
   }),
+  {index: 1}
 );
 
 const Landing = ({ onScroll }: any) => {
