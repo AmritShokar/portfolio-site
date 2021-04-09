@@ -8,8 +8,10 @@ import icon4 from '../../res/happy4.svg'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    section: {
+      backgroundColor: '#ADD8E6'
+    },
     grid: {
-        backgroundColor: '#ADD8E6',
         padding: '3em'
     },
     icons: {
@@ -24,30 +26,36 @@ const Start = () => {
     const classes = useStyles()
 
     return (
-        <Box>
+        <Box className={classes.section}>
             <Grid container className={classes.grid}>
-              <Grid item xs={3} md={2}>
+              <Grid item md={2} />
+
+              <Grid item xs={3} md={1}>
                 <Avatar alt="icon1" src={icon1} className={classes.icons} />
               </Grid>
 
               <Grid item md={1} />
 
-              <Grid item xs={3} md={2}>
+              <Grid item xs={3} md={1}>
                 <Avatar alt="icon2" src={icon2} className={classes.icons} />
               </Grid>
 
               <Grid item md={2} />
               
-              <Grid item xs={3} md={2}>
+              <Grid item xs={3} md={1}>
                 <Avatar alt="icon3" src={icon3} className={classes.icons} />
               </Grid>
 
               <Grid item md={1} />
 
-              <Grid item xs={3} md={2}>
+              <Grid item xs={3} md={1}>
                 <Avatar alt="icon4" src={icon4} className={classes.icons} />
               </Grid>
+
+              <Grid item md={2} />
             </Grid>
+
+            <div>Icons made by Roundicons from www.flaticon.com</div>
         </Box>
     )
 }

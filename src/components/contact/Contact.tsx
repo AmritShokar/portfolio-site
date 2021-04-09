@@ -1,14 +1,19 @@
 import styles from './Contact.module.css'
-import { Box, Grid, Avatar, makeStyles, createStyles, Theme } from '@material-ui/core'
+import { Box, Grid, Avatar, Typography, makeStyles, createStyles, Theme } from '@material-ui/core'
 
 import letter from '../../res/letter.png'
 import contact from '../../res/contact5.png'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
-        root: {
+        section: {
             backgroundColor: '#90EE90',
             padding: '5em'
+        },
+        title: {
+            fontFamily: 'Ubuntu',
+            fontSize: '4em',
+            paddingBottom: '1em'
         },
         iconAvatar: {
             height: 'auto',
@@ -25,7 +30,9 @@ const useStyles = makeStyles((theme: Theme) =>
 const Contact = ({ test }: any) => {
     const classes = useStyles()
     return (
-        <Box className={classes.root}>
+        <Box className={classes.section}>
+            <Typography align="center" gutterBottom variant="h2" className={classes.title}>Contact</Typography>
+
             <Grid container alignItems="center" justify="center" ref={test}>
                 <Grid item xs={2} md={3}/>
 

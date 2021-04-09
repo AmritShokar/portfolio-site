@@ -5,6 +5,11 @@ import profile from '../../res/profile.png'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    section: {
+        backgroundColor: '#90EE90',
+        paddingTop: '3em',
+        paddingBottom: '6em'
+    },
     title: {
         fontFamily: 'Ubuntu',
         fontSize: '4em'
@@ -39,7 +44,7 @@ const Summary = () => {
     const classes = useStyles();
 
     return (
-        <Box className={styles["section"]}>
+        <Box className={classes.section}>
             <Typography align="center" gutterBottom variant="h2" className={classes.title}>Summary</Typography>
 
             <Grid container direction="column" justify="center" alignItems="center">

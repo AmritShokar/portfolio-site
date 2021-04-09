@@ -1,7 +1,7 @@
 import styles from './Landing.module.css'
-import {AppBar, Toolbar, Button, Box, Typography, makeStyles, createStyles, Theme} from '@material-ui/core'
+import {AppBar, Toolbar, Button, Box, Grid, Typography, makeStyles, createStyles, Theme} from '@material-ui/core'
 
-import landing from '../../res/kelowna-landing-image.jpg'
+import landing from '../../res/kelowna-landing-image-2.jpg'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -28,22 +28,30 @@ const Landing = ({ onScroll }: any) => {
     const classes = useStyles();
     return (
         <Box className={classes.background}>
-            <AppBar position="static" className={classes.appBar}>
-                <Toolbar>
-                    <Button>
-                        <Typography variant="body1" className={classes.buttonText}>Home</Typography>
-                    </Button>
-                    <Button>
-                        <Typography variant="body1" className={classes.buttonText}>Summary</Typography>
-                    </Button>
-                    <Button>
-                        <Typography variant="body1" className={classes.buttonText}>Project</Typography>
-                    </Button>
-                    <Button onClick={onScroll}>
-                        <Typography variant="body1" className={classes.buttonText}>Contact</Typography>
-                    </Button>
-                </Toolbar>
-            </AppBar>
+            <Grid container>
+                <Grid item xs={12} md={4}>
+                    <p className={styles['attribution']}>Photo by Jeffrey Eisen on Unsplash</p>
+                </Grid>
+ 
+                <Grid item xs={12} md={8}>
+                    <AppBar position="static" className={classes.appBar}>
+                        <Toolbar>
+                            <Button>
+                                <Typography variant="body1" className={classes.buttonText}>Home</Typography>
+                            </Button>
+                            <Button>
+                                <Typography variant="body1" className={classes.buttonText}>Summary</Typography>
+                            </Button>
+                            <Button>
+                                <Typography variant="body1" className={classes.buttonText}>Project</Typography>
+                            </Button>
+                            <Button onClick={onScroll}>
+                                <Typography variant="body1" className={classes.buttonText}>Contact</Typography>
+                            </Button>
+                        </Toolbar>
+                    </AppBar>
+                </Grid>
+            </Grid>
         </Box>
     )
 }

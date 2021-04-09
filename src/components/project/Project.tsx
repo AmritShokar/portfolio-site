@@ -8,6 +8,10 @@ import komixstreamApp from '../../res/komixstreamApp.png'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    section: {
+        backgroundColor: '#ADD8E6',
+        padding: '5em'
+    },
     title: {
         fontFamily: 'Ubuntu',
         fontSize: '4em',
@@ -37,7 +41,7 @@ const Project = () => {
     const classes = useStyles();
 
     return (
-        <Box className={styles["section"]}>
+        <Box className={classes.section}>
             <Typography align="center" gutterBottom variant="h2" className={classes.title}>Projects</Typography>
             <Grid container direction="column">
 
