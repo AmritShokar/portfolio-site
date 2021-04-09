@@ -48,16 +48,18 @@ const Summary = () => {
             <Typography align="center" gutterBottom variant="h2" className={classes.title}>Summary</Typography>
 
             <Grid container direction="column" justify="center" alignItems="center">
-                
                 <Grid item xs={1} md={3} />
+
                 <Grid item xs={10} md={6}>
                     <Paper elevation={8} className={classes.picturePaper}>
                         <Avatar alt="AS" src={profile} variant="square" className={classes.picture}></Avatar>
                     </Paper>
                 </Grid>
+
                 <Grid item xs={1} md={3} />
 
                 <Grid item md={1}/>
+
                 <Grid item xs={12} md={10}>
                     <Paper elevation={4} className={classes.summaryPaper}>
                         <Typography className={classes.summary}>
@@ -72,10 +74,9 @@ const Summary = () => {
                         </Typography>
                     </Paper>
                 </Grid>
+
                 <Grid item md={1}/>
-
             </Grid>
-
         </Box>
     )
 }

@@ -43,10 +43,11 @@ const Project = () => {
     return (
         <Box className={classes.section}>
             <Typography align="center" gutterBottom variant="h2" className={classes.title}>Projects</Typography>
-            <Grid container direction="column">
 
+            <Grid container direction="column">
                 <Grid item xs={12} container>
                     <Grid item md={1}/>
+
                     <Grid item xs={12} md={4}>
                         <Avatar alt="bridge services app" variant="square" src={bridgeApp} className={classes.projectImage}/>
                     </Grid>
@@ -81,7 +82,6 @@ const Project = () => {
                 <Divider className={classes.divider}/>
 
                 <Grid item xs={12} container>
-
                     <Grid item xs={12} md={3}>
                         <Avatar alt="yodelme app" variant="square" src={yodelmeApp} className={classes.projectImage} />
                     </Grid>
@@ -118,7 +118,6 @@ const Project = () => {
 
                         </Paper>
                     </Grid>
-
                 </Grid>
 
                 <Divider className={classes.divider}/>
@@ -157,6 +156,7 @@ const Project = () => {
 
                         </Paper>
                     </Grid>
+                    
                     <Grid item md={1}/>
                 </Grid>
 
