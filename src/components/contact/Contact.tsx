@@ -1,6 +1,5 @@
 import styles from './Contact.module.css'
-
-import { Box, Grid, Typography, makeStyles, createStyles, Theme, Avatar } from '@material-ui/core'
+import { Box, Grid, Avatar, makeStyles, createStyles, Theme } from '@material-ui/core'
 
 import letter from '../../res/letter.png'
 import contact from '../../res/contact5.png'
@@ -22,11 +21,11 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-const Contact = () => {
+const Contact = ({ test }: any) => {
     const classes = useStyles()
     return (
         <Box className={classes.root}>
-            <Grid container alignItems="center" justify="center">
+            <Grid container alignItems="center" justify="center" ref={test}>
                 <Grid item xs={2} md={3}/>
 
                 <Grid item xs={8} md={2}>

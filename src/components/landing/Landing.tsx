@@ -1,5 +1,5 @@
 import styles from './Landing.module.css'
-import {AppBar, Toolbar, Button, Box, makeStyles, createStyles, Theme} from '@material-ui/core'
+import {AppBar, Toolbar, Button, Box, Typography, makeStyles, createStyles, Theme} from '@material-ui/core'
 
 import landing from '../../res/kelowna-landing-image.jpg'
 
@@ -11,27 +11,36 @@ const useStyles = makeStyles((theme: Theme) =>
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
     },
-    AppBar: {
+    appBar: {
         backgroundColor: 'transparent',
         boxShadow: '0px 0px 0px 0px',
         alignItems: 'flex-end',
         flex: 2
+    },
+    buttonText: {
+        fontFamily: 'Ubuntu'
     }
   }),
 );
 
-const Landing = () => {
+const Landing = ({ onScroll }: any) => {
     const classes = useStyles();
     return (
         <Box className={classes.background}>
-            {/* <Typography className={styles["logo"]}>Amritpal's Portfolio</Typography> */}
-
-            <AppBar position="static" className={classes.AppBar}>
+            <AppBar position="static" className={classes.appBar}>
                 <Toolbar>
-                    <Button>Home</Button>
-                    <Button>Summary</Button>
-                    <Button>Skills</Button>
-                    <Button>Projects</Button>
+                    <Button>
+                        <Typography variant="body1" className={classes.buttonText}>Home</Typography>
+                    </Button>
+                    <Button>
+                        <Typography variant="body1" className={classes.buttonText}>Summary</Typography>
+                    </Button>
+                    <Button>
+                        <Typography variant="body1" className={classes.buttonText}>Project</Typography>
+                    </Button>
+                    <Button onClick={onScroll}>
+                        <Typography variant="body1" className={classes.buttonText}>Contact</Typography>
+                    </Button>
                 </Toolbar>
             </AppBar>
         </Box>
