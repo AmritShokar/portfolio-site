@@ -55,7 +55,6 @@ const Start = () => {
               <Grid item md={2} />
             </Grid>
 
-            <div>Icons made by Roundicons from www.flaticon.com</div>
         </Box>
     )
 }

@@ -26,7 +26,7 @@ function App() {
       <Start />
       <Summary />
       <Project />
-      <Contact test={compRef} />
+      <Contact getRef={compRef} />
     </div>
   );
 }

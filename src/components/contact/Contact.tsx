@@ -27,13 +27,13 @@ const useStyles = makeStyles((theme: Theme) =>
     {index: 1}
 );
 
-const Contact = ({ test }: any) => {
+const Contact = ({ getRef }: any) => {
     const classes = useStyles()
     return (
-        <Box className={classes.section}>
+        <Box className={classes.section} flexDirection="column">
             <Typography align="center" gutterBottom variant="h2" className={classes.title}>Contact</Typography>
 
-            <Grid container alignItems="center" justify="center" ref={test}>
+            <Grid container alignItems="center" justify="center" ref={getRef}>
                 <Grid item xs={2} md={3}/>
 
                 <Grid item xs={8} md={2}>
@@ -48,6 +48,9 @@ const Contact = ({ test }: any) => {
 
                 <Grid item md={3}/>
             </Grid>
+
+            <p>Photo by Jeffrey Eisen on Unsplash</p>
+            <p>Icons made by Roundicons from www.flaticon.com</p>
         </Box>
     )
 }

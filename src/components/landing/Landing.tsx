@@ -29,11 +29,7 @@ const Landing = ({ onScroll }: any) => {
     return (
         <Box className={classes.background}>
             <Grid container>
-                <Grid item xs={12} md={4}>
-                    <p className={styles['attribution']}>Photo by Jeffrey Eisen on Unsplash</p>
-                </Grid>
- 
-                <Grid item xs={12} md={8}>
+                <Grid item xs={12}>
                     <AppBar position="static" className={classes.appBar}>
                         <Toolbar>
                             <Button>
