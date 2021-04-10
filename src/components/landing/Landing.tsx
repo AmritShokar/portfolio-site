@@ -44,7 +44,7 @@ const Landing = ({ onScroll }: any) => {
                     <Typography variant="h1" className={classes.greeting} >Welcome</Typography>
                 </Grid>
                 
-                <Grid item xs={8}>
+                <Grid item xs={12} md={8}>
                     <AppBar position="static" className={classes.appBar}>
                         <Toolbar>
                             <Button className={classes.button}>
