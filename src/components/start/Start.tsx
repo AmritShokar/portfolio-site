@@ -1,10 +1,5 @@
 import styles from './Start.module.css'
-import { Box, Grid, Avatar, makeStyles, createStyles, Theme } from '@material-ui/core'
-
-import icon1 from '../../res/happy1.svg'
-import icon2 from '../../res/happy2.svg'
-import icon3 from '../../res/happy3.svg'
-import icon4 from '../../res/happy4.svg'
+import { Box, makeStyles, createStyles, Theme } from '@material-ui/core'
 
 import transition from '../../res/kelowna-transition-1.jpg'
 
