@@ -49,8 +49,6 @@ const Contact = ({ getRef }: any) => {
                 <Grid item md={3}/>
             </Grid>
 
-            <p>Photo by Jeffrey Eisen on Unsplash</p>
-            <p>Icons made by Roundicons from www.flaticon.com</p>
         </Box>
     )
 }
