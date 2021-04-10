@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import React, { useRef } from 'react'
 import './App.css'
 
 import Landing from './components/landing/Landing'
@@ -14,7 +14,10 @@ interface onClicks {
 function App() {
   const compRef = useRef<HTMLDivElement>()
 
-  const scrollTo = () => {
+  const scrollTo = (e: React.MouseEventHandler<HTMLButtonElement>) => {
+
+    console.log(e.name)
+
     if (compRef.current) {
       compRef.current.scrollIntoView({ behavior: 'smooth'})
     }
