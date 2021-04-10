@@ -38,13 +38,6 @@ const Start = () => {
 
     return (
         <Box className={classes.section}>
-            {/* <Grid container className={classes.grid}> */}
-              
-              {/* <img src={transition} className={classes.transition} /> */}
-
-              
-            {/* </Grid> */}
-
         </Box>
     )
 }
