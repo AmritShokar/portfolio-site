@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
         fontFamily: 'Train One',
         color: 'white',
         paddingLeft: '1em',
-        paddingTop: '1em'
+        paddingTop: '0.5em'
     }
   }),
   {index: 1}
