@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { createRef, RefObject, useRef, useState } from 'react'
 import './App.css'
 
 import Landing from './components/landing/Landing'
@@ -6,21 +6,35 @@ import Start from './components/start/Start'
 import Summary from './components/summary/Summary'
 import Project from './components/project/Project'
 import Contact from './components/contact/Contact'
+import { setRef } from '@material-ui/core'
 
-interface onClicks {
-  
-}
+// export interface ComponentRef {
+//   testRef: RefObject<HTMLDivElement>
+// }
 
 function App() {
-  const compRef = useRef<HTMLDivElement>()
 
-  const scrollTo = (e: React.MouseEventHandler<HTMLButtonElement>) => {
+  // const [compRef, setCompRef] = useState([])
+  // const compRef = useRef<HTMLDivElement>()
+  // let testingRef: RefObject<HTMLDivElement> = createRef<HTMLDivElement>();
 
-    console.log(e.name)
+  // const testingRef: ComponentRef = {
+  const testRef = createRef<HTMLDivElement>()
+  // const testRef = RefObject<HTMLDivElement>()
+  // }
 
-    if (compRef.current) {
-      compRef.current.scrollIntoView({ behavior: 'smooth'})
+
+  const scrollTo = (e: React.MouseEventHandler<HTMLButtonElement>, compName: string) => {
+
+    console.log()
+
+    if (testRef.current) {
+      testRef.current.scrollIntoView({ behavior: 'smooth'})
     }
+  }
+
+  const setRef = (elementRef: HTMLDivElement) => {
+
   }
 
   return (
@@ -29,7 +43,7 @@ function App() {
       <Start />
       <Summary />
       <Project />
-      <Contact getRef={compRef} />
+      <Contact testingRef={testRef} />
     </div>
   );
 }

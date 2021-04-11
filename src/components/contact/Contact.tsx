@@ -1,4 +1,6 @@
-import styles from './Contact.module.css'
+// import styles from './Contact.module.css'
+import React, { createRef, RefObject } from 'react'
+import PropTypes from 'prop-types'
 import { Box, Grid, Avatar, Typography, makeStyles, createStyles, Theme } from '@material-ui/core'
 
 import letter from '../../res/letter.png'
@@ -25,15 +27,20 @@ const useStyles = makeStyles((theme: Theme) =>
         }
     }),
     {index: 1}
-);
+)
 
-const Contact = ({ getRef }: any) => {
+export interface ComponentRef {
+    testingRef: RefObject<HTMLDivElement>
+}
+
+const Contact = ({ testingRef }: ComponentRef) => {
     const classes = useStyles()
+
     return (
-        <Box className={classes.section} flexDirection="column">
+        <div className={classes.section} ref={testingRef}>
             <Typography align="center" gutterBottom variant="h2" className={classes.title}>Contact</Typography>
 
-            <Grid container alignItems="center" justify="center" ref={getRef}>
+            <Grid container alignItems="center" justify="center">
                 <Grid item xs={2} md={3}/>
 
                 <Grid item xs={8} md={2}>
@@ -49,8 +56,12 @@ const Contact = ({ getRef }: any) => {
                 <Grid item md={3}/>
             </Grid>
 
-        </Box>
+        </div>
     )
+}
+
+Contact.propTyes = {
+    tester: PropTypes.func
 }
 
 export default Contact

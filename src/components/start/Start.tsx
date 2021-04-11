@@ -1,4 +1,4 @@
-import styles from './Start.module.css'
+// import styles from './Start.module.css'
 import { Box, makeStyles, createStyles, Theme } from '@material-ui/core'
 
 import transition from '../../res/kelowna-transition-1.jpg'

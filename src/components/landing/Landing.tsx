@@ -1,4 +1,4 @@
-import styles from './Landing.module.css'
+// import styles from './Landing.module.css'
 import {AppBar, Toolbar, Button, Box, Grid, Typography, makeStyles, createStyles, Theme} from '@material-ui/core'
 
 import landing from '../../res/kelowna-landing-image-4.jpg'
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
         marginRight: '1em'
     },
     buttonText: {
-        fontFamily: 'PT Serif',
+        fontFamily: 'Ubuntu',
         color: 'white'
     },
     greeting: {
@@ -47,16 +47,16 @@ const Landing = ({ onScroll }: any) => {
                 <Grid item xs={12} md={8}>
                     <AppBar position="static" className={classes.appBar}>
                         <Toolbar>
-                            <Button className={classes.button}>
+                            <Button onClick={(e) => onScroll(e, 'home')} className={classes.button}>
                                 <Typography variant="body1" className={classes.buttonText}>Home</Typography>
                             </Button>
-                            <Button className={classes.button}>
+                            <Button onClick={(e) => onScroll(e, 'summary')} className={classes.button}>
                                 <Typography variant="body1" className={classes.buttonText}>Summary</Typography>
                             </Button>
-                            <Button className={classes.button}>
+                            <Button onClick={(e) => onScroll(e, 'project')} className={classes.button}>
                                 <Typography variant="body1" className={classes.buttonText}>Projects</Typography>
                             </Button>
-                            <Button onClick={onScroll} className={classes.button}>
+                            <Button onClick={(e) => onScroll(e, 'contact')} className={classes.button}>
                                 <Typography variant="body1" className={classes.buttonText}>Contact</Typography>
                             </Button>
                         </Toolbar>
