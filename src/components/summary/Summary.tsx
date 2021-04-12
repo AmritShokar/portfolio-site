@@ -1,5 +1,5 @@
-// import styles from './Summary.module.css'
-import { Box, Grid, Paper, Avatar, Typography, makeStyles, createStyles, Theme } from '@material-ui/core'
+import React, { forwardRef } from 'react'
+import { Grid, Paper, Avatar, Typography, makeStyles, createStyles, Theme } from '@material-ui/core'
 
 import profile from '../../res/profile.png'
 
@@ -40,11 +40,12 @@ const useStyles = makeStyles((theme: Theme) =>
   {index: 1}
 );
 
-const Summary = () => {
+type Props = {}
+const Summary = forwardRef<HTMLDivElement, Props>(( props, ref ) => {
     const classes = useStyles();
 
     return (
-        <Box className={classes.section}>
+        <div className={classes.section} ref={ref}>
             <Typography align="center" gutterBottom variant="h2" className={classes.title}>Summary</Typography>
 
             <Grid container direction="column" justify="center" alignItems="center">
@@ -77,8 +78,8 @@ const Summary = () => {
 
                 <Grid item md={1}/>
             </Grid>
-        </Box>
+        </div>
     )
-}
+})
 
 export default Summary

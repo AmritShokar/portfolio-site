@@ -1,5 +1,6 @@
 import styles from './Project.module.css'
-import { Box, Grid, Paper, Avatar, Typography, makeStyles, createStyles, Theme, Divider } from '@material-ui/core'
+import React, { forwardRef } from 'react'
+import { Grid, Paper, Avatar, Typography, makeStyles, createStyles, Theme, Divider } from '@material-ui/core'
 
 import bridgeApp from '../../res/bridgeApp1.png'
 import yodelmeApp from '../../res/yodelmeApp1.jpg'
@@ -37,11 +38,12 @@ const useStyles = makeStyles((theme: Theme) =>
   {index: 1}
 );
 
-const Project = () => {
+type Props = {}
+const Project = forwardRef<HTMLDivElement, Props>(( props, ref ) => {
     const classes = useStyles();
 
     return (
-        <Box className={classes.section}>
+        <div className={classes.section} ref={ref}>
             <Typography align="center" gutterBottom variant="h2" className={classes.title}>Projects</Typography>
 
             <Grid container direction="column">
@@ -161,8 +163,8 @@ const Project = () => {
                 </Grid>
 
             </Grid>
-        </Box>
+        </div>
     )
-}
+})
 
 export default Project

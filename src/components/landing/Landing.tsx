@@ -1,4 +1,4 @@
-// import styles from './Landing.module.css'
+import React, { forwardRef } from 'react'
 import {AppBar, Toolbar, Button, Box, Grid, Typography, makeStyles, createStyles, Theme} from '@material-ui/core'
 
 import landing from '../../res/kelowna-landing-image-4.jpg'
@@ -35,7 +35,8 @@ const useStyles = makeStyles((theme: Theme) =>
   {index: 1}
 );
 
-const Landing = ({ onScroll }: any) => {
+type Props = { onScroll: any }
+const Landing = forwardRef<HTMLDivElement, Props>(( props, ref ) => {
     const classes = useStyles();
     return (
         <Box className={classes.background}>
@@ -47,16 +48,16 @@ const Landing = ({ onScroll }: any) => {
                 <Grid item xs={12} md={8}>
                     <AppBar position="static" className={classes.appBar}>
                         <Toolbar>
-                            <Button onClick={(e) => onScroll(e, 'home')} className={classes.button}>
+                            <Button onClick={(e) => props.onScroll(e, 'home')} className={classes.button}>
                                 <Typography variant="body1" className={classes.buttonText}>Home</Typography>
                             </Button>
-                            <Button onClick={(e) => onScroll(e, 'summary')} className={classes.button}>
+                            <Button onClick={(e) => props.onScroll(e, 'summary')} className={classes.button}>
                                 <Typography variant="body1" className={classes.buttonText}>Summary</Typography>
                             </Button>
-                            <Button onClick={(e) => onScroll(e, 'project')} className={classes.button}>
+                            <Button onClick={(e) => props.onScroll(e, 'project')} className={classes.button}>
                                 <Typography variant="body1" className={classes.buttonText}>Projects</Typography>
                             </Button>
-                            <Button onClick={(e) => onScroll(e, 'contact')} className={classes.button}>
+                            <Button onClick={(e) => props.onScroll(e, 'contact')} className={classes.button}>
                                 <Typography variant="body1" className={classes.buttonText}>Contact</Typography>
                             </Button>
                         </Toolbar>
@@ -65,6 +66,6 @@ const Landing = ({ onScroll }: any) => {
             </Grid>
         </Box>
     )
-}
+})
 
 export default Landing

@@ -6,48 +6,49 @@ import Start from './components/start/Start'
 import Summary from './components/summary/Summary'
 import Project from './components/project/Project'
 import Contact from './components/contact/Contact'
-import { setRef } from '@material-ui/core'
 
-// export interface ComponentRef {
-//   refz: ForwardRefRenderFunction<>
-// }
+interface ComponentRef {
+  name: string,
+  reference: RefObject<HTMLDivElement>
+}
 
 function App() {
 
-  // const [compRef, setCompRef] = useState([])
-  const refz = createRef<HTMLDivElement>()
-  // let testingRef: RefObject<HTMLDivElement> = createRef<HTMLDivElement>();
-
-  // const testingRef: ComponentRef = {
-  // const testRef = createRef<HTMLDivElement>()
-  // const testRef = RefObject<HTMLDivElement>()
-  // }
-
-  const addRef = () => {
-
-  }
-
+  const componentRef: ComponentRef[] = [
+    { 
+      name: 'landing',
+      reference: createRef<HTMLDivElement>()
+    },
+    {
+      name: 'summary',
+      reference: createRef<HTMLDivElement>()
+    },
+    {
+      name: 'project',
+      reference: createRef<HTMLDivElement>()
+    },
+    {
+      name: 'contact',
+      reference: createRef<HTMLDivElement>()
+    }
+  ]
 
   const scrollTo = (e: React.MouseEventHandler<HTMLButtonElement>, compName: string) => {
 
-    console.log()
-
-    if (refz.current) {
-      refz.current.scrollIntoView({ behavior: 'smooth'})
+    const selectedComponent = componentRef.filter((component) => component.name == compName)
+    console.log(`see this length: ${compName}`)
+    if (selectedComponent[0].reference.current) {
+      selectedComponent[0].reference.current.scrollIntoView({ behavior: 'smooth'})
     }
-  }
-
-  const setRef = (elementRef: HTMLDivElement) => {
-
   }
 
   return (
     <div className="app">
-      <Landing onScroll={scrollTo} />
+      <Landing ref={componentRef[0].reference} onScroll={scrollTo} />
       <Start />
-      <Summary />
-      <Project />
-      <Contact ref={refz} />
+      <Summary ref={componentRef[1].reference} />
+      <Project ref={componentRef[2].reference} />
+      <Contact ref={componentRef[3].reference} />
     </div>
   );
 }
