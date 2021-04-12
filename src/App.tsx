@@ -1,4 +1,4 @@
-import React, { createRef, forwardRef, RefObject, useRef, useState, LegacyRef, ForwardRefRenderFunction } from 'react'
+import React, { createRef, RefObject } from 'react'
 import './App.css'
 
 import Landing from './components/landing/Landing'
@@ -34,9 +34,7 @@ function App() {
   ]
 
   const scrollTo = (e: React.MouseEventHandler<HTMLButtonElement>, compName: string) => {
-
-    const selectedComponent = componentRef.filter((component) => component.name == compName)
-    console.log(`see this length: ${compName}`)
+    const selectedComponent = componentRef.filter((component) => component.name === compName)
     if (selectedComponent[0].reference.current) {
       selectedComponent[0].reference.current.scrollIntoView({ behavior: 'smooth'})
     }
