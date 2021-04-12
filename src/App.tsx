@@ -1,4 +1,4 @@
-import React, { createRef, RefObject, useRef, useState } from 'react'
+import React, { createRef, forwardRef, RefObject, useRef, useState, LegacyRef, ForwardRefRenderFunction } from 'react'
 import './App.css'
 
 import Landing from './components/landing/Landing'
@@ -9,27 +9,31 @@ import Contact from './components/contact/Contact'
 import { setRef } from '@material-ui/core'
 
 // export interface ComponentRef {
-//   testRef: RefObject<HTMLDivElement>
+//   refz: ForwardRefRenderFunction<>
 // }
 
 function App() {
 
   // const [compRef, setCompRef] = useState([])
-  // const compRef = useRef<HTMLDivElement>()
+  const refz = createRef<HTMLDivElement>()
   // let testingRef: RefObject<HTMLDivElement> = createRef<HTMLDivElement>();
 
   // const testingRef: ComponentRef = {
-  const testRef = createRef<HTMLDivElement>()
+  // const testRef = createRef<HTMLDivElement>()
   // const testRef = RefObject<HTMLDivElement>()
   // }
+
+  const addRef = () => {
+
+  }
 
 
   const scrollTo = (e: React.MouseEventHandler<HTMLButtonElement>, compName: string) => {
 
     console.log()
 
-    if (testRef.current) {
-      testRef.current.scrollIntoView({ behavior: 'smooth'})
+    if (refz.current) {
+      refz.current.scrollIntoView({ behavior: 'smooth'})
     }
   }
 
@@ -43,7 +47,7 @@ function App() {
       <Start />
       <Summary />
       <Project />
-      <Contact testingRef={testRef} />
+      <Contact ref={refz} />
     </div>
   );
 }
