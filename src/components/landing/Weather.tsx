@@ -42,7 +42,7 @@ const Weather = () => {
     return (
         <Box className={classes.section}>
             <Typography variant="h4" className={classes.temperature}>Kelowna</Typography>
-            { weatherData && <Typography variant="h5" className={classes.temperature}>{weatherData.temp} °C</Typography> }
+            { weatherData && <Typography variant="h5" className={classes.temperature}>{Math.round(weatherData.temp)} °C</Typography> }
         </Box>
     )
 }
