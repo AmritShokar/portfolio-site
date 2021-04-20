@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { AxiosRequestConfig } from 'axios'
+import { Typography } from '@material-ui/core'
 
 import httpClient from '../../lib/HttpClient'
 import IWeather from '../../lib/IWeather'
@@ -12,21 +13,24 @@ const weatherConfig: AxiosRequestConfig = {
     }
 }
 
-const response = (data: any) => {
-    const currentWeather: IWeather = data
-    console.log(currentWeather.temp)
-}
+// const [weatherData, setWeatherData] = useState({})
 
 const Weather = () => {
-    const [weatherData, setWeatherData] = useState({})
-
     useEffect(() => {
         httpClient(weatherConfig, response)
     }, [])
 
+    const [weatherData, setWeatherData] = useState<IWeather>()
+
+    const response = (data: any) => {
+        const currentWeather: IWeather = data
+        setWeatherData(currentWeather)
+    }
+
     return (
         <div>
-            hi
+            <Typography variant="h4">Kelowna</Typography>
+            { weatherData && <Typography variant="h5">{weatherData.temp} °C</Typography> }
         </div>
     )
 }

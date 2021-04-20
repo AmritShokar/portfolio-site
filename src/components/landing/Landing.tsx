@@ -65,9 +65,10 @@ const Landing = forwardRef<HTMLDivElement, Props>(( props, ref ) => {
                         </Toolbar>
                     </AppBar>
                 </Grid>
+                <Grid item xs={12} md={12}>
+                    <Weather />
+                </Grid>
             </Grid>
-
-            <Weather />
         </Box>
     )
 })
