@@ -8,6 +8,7 @@ import Start from './components/start/Start'
 import Summary from './components/summary/Summary'
 import Project from './components/project/Project'
 import Contact from './components/contact/Contact'
+import Video from './components/video/Video'
 
 interface ComponentRef {
   name: string,
@@ -49,6 +50,7 @@ function App() {
       <Summary ref={componentRef[1].reference} />
       <Project ref={componentRef[2].reference} />
       <Contact ref={componentRef[3].reference} />
+      <Video />
     </div>
   );
 }
