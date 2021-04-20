@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { AxiosRequestConfig } from 'axios'
-import { Typography } from '@material-ui/core'
+import { Box, Typography, makeStyles, createStyles, Theme } from '@material-ui/core'
 
 import httpClient from '../../lib/HttpClient'
 import IWeather from '../../lib/IWeather'
@@ -13,25 +13,37 @@ const weatherConfig: AxiosRequestConfig = {
     }
 }
 
-// const [weatherData, setWeatherData] = useState({})
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    section: {
+        paddingTop: '1em',
+        paddingLeft: '6em'
+    },
+    temperature: {
+        fontFamily: 'Ubuntu',
+        color: 'white'
+    }
+  }),
+  {index: 1}
+);
 
 const Weather = () => {
+    const classes = useStyles()
     useEffect(() => {
         httpClient(weatherConfig, response)
     }, [])
 
     const [weatherData, setWeatherData] = useState<IWeather>()
 
-    const response = (data: any) => {
-        const currentWeather: IWeather = data
-        setWeatherData(currentWeather)
+    const response = (data: IWeather) => {
+        setWeatherData(data)
     }
 
     return (
-        <div>
-            <Typography variant="h4">Kelowna</Typography>
-            { weatherData && <Typography variant="h5">{weatherData.temp} °C</Typography> }
-        </div>
+        <Box className={classes.section}>
+            <Typography variant="h4" className={classes.temperature}>Kelowna</Typography>
+            { weatherData && <Typography variant="h5" className={classes.temperature}>{weatherData.temp} °C</Typography> }
+        </Box>
     )
 }
 

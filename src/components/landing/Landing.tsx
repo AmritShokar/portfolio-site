@@ -20,18 +20,22 @@ const useStyles = makeStyles((theme: Theme) =>
         flex: 2
     },
     button: {
-        marginLeft: '1em',
-        marginRight: '1em'
+        [theme.breakpoints.up('sm')]: {
+            marginLeft: '1em',
+            marginRight: '1em'
+        }
     },
     buttonText: {
         fontFamily: 'Ubuntu',
         color: 'white'
     },
     greeting: {
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: '1em',
+            paddingTop: '0.5em'
+        },
         fontFamily: 'Train One',
         color: 'white',
-        paddingLeft: '1em',
-        paddingTop: '0.5em'
     }
   }),
   {index: 1}
@@ -43,8 +47,8 @@ const Landing = forwardRef<HTMLDivElement, Props>(( props, ref ) => {
     return (
         <Box className={classes.background}>
             <Grid container>
-                <Grid item md={4}> 
-                    <Typography variant="h1" className={classes.greeting} >Welcome</Typography>
+                <Grid item xs={12} md={4}> 
+                    <Typography variant="h2" className={classes.greeting}>Welcome</Typography>
                 </Grid>
                 
                 <Grid item xs={12} md={8}>
@@ -65,6 +69,7 @@ const Landing = forwardRef<HTMLDivElement, Props>(( props, ref ) => {
                         </Toolbar>
                     </AppBar>
                 </Grid>
+
                 <Grid item xs={12} md={12}>
                     <Weather />
                 </Grid>
