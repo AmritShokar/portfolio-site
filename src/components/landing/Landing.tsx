@@ -1,6 +1,8 @@
 import React, { forwardRef } from 'react'
 import {AppBar, Toolbar, Button, Box, Grid, Typography, makeStyles, createStyles, Theme} from '@material-ui/core'
 
+import Weather from './Weather'
+
 import landing from '../../res/kelowna-landing-image-4.jpg'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -64,6 +66,8 @@ const Landing = forwardRef<HTMLDivElement, Props>(( props, ref ) => {
                     </AppBar>
                 </Grid>
             </Grid>
+
+            <Weather />
         </Box>
     )
 })

@@ -1,5 +1,7 @@
-import React, { createRef, RefObject } from 'react'
+import React, { createRef, RefObject, useEffect } from 'react'
 import './App.css'
+
+import HttpClient from './lib/HttpClient'
 
 import Landing from './components/landing/Landing'
 import Start from './components/start/Start'
