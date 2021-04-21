@@ -1,4 +1,5 @@
-import React, { createRef, RefObject, useEffect } from 'react'
+import React, { createRef, RefObject } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css'
 
 import HttpClient from './lib/HttpClient'
@@ -44,14 +45,22 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <Landing ref={componentRef[0].reference} onScroll={scrollTo} />
-      <Start />
-      <Summary ref={componentRef[1].reference} />
-      <Project ref={componentRef[2].reference} />
-      <Contact ref={componentRef[3].reference} />
-      <Video />
-    </div>
+    <Router>
+      <div className="app">
+        <Switch>
+          <Route exact path="/">
+            <Landing ref={componentRef[0].reference} onScroll={scrollTo} />
+            <Start />
+            <Summary ref={componentRef[1].reference} />
+            <Project ref={componentRef[2].reference} />
+            <Contact ref={componentRef[3].reference} />
+          </Route>
+          <Route path="/video">
+            <Video />
+          </Route>          
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

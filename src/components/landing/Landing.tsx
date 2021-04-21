@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react'
+import { Link } from 'react-router-dom'
 import {AppBar, Toolbar, Button, Box, Grid, Typography, makeStyles, createStyles, Theme} from '@material-ui/core'
 
 import Weather from './Weather'
@@ -66,6 +67,9 @@ const Landing = forwardRef<HTMLDivElement, Props>(( props, ref ) => {
                             <Button onClick={(e) => props.onScroll(e, 'contact')} className={classes.button}>
                                 <Typography variant="body1" className={classes.buttonText}>Contact</Typography>
                             </Button>
+                            <Link to="/video" className={classes.button}>
+                                <Typography variant="body1" className={classes.buttonText}>VIDEOS</Typography>
+                            </Link>
                         </Toolbar>
                     </AppBar>
                 </Grid>
