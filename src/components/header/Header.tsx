@@ -52,11 +52,11 @@ const Header:FC<Props> = ({ scrollTo }: Props ) => {
                             <Button onClick={(e) => scrollTo(e, 'contact')} className={classes.button}>
                                 <Typography variant="body1" className={classes.buttonText}>Contact</Typography>
                             </Button>
-                            <Button onClick={(e) => scrollTo(e, 'contact')} className={classes.button}>
+                            {/* <Button onClick={(e) => scrollTo(e, 'contact')} className={classes.button}>
                                 <Link to="/video" className={classes.link}>
                                     <Typography variant="body1" className={classes.buttonText}>Videos</Typography>
                                 </Link>
-                            </Button>
+                            </Button> */}
                         </Grid>
                     </Grid>
 
