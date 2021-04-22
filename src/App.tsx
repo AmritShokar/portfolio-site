@@ -1,9 +1,8 @@
-import React, { createRef, RefObject } from 'react'
+import React, { createRef, RefObject, MouseEvent } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css'
 
-import HttpClient from './lib/HttpClient'
-
+import Header from './components/header/Header'
 import Landing from './components/landing/Landing'
 import Start from './components/start/Start'
 import Summary from './components/summary/Summary'
@@ -37,7 +36,7 @@ function App() {
     }
   ]
 
-  const scrollTo = (e: React.MouseEventHandler<HTMLButtonElement>, compName: string) => {
+  const scrollTo = (e: MouseEvent<HTMLButtonElement>, compName: string) => {
     const selectedComponent = componentRef.filter((component) => component.name === compName)
     if (selectedComponent[0].reference.current) {
       selectedComponent[0].reference.current.scrollIntoView({ behavior: 'smooth'})
@@ -49,7 +48,8 @@ function App() {
       <div className="app">
         <Switch>
           <Route exact path="/">
-            <Landing ref={componentRef[0].reference} onScroll={scrollTo} />
+            <Header scrollTo={scrollTo} />
+            <Landing ref={componentRef[0].reference} />
             <Start />
             <Summary ref={componentRef[1].reference} />
             <Project ref={componentRef[2].reference} />

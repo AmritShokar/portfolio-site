@@ -16,6 +16,10 @@ const weatherConfig: AxiosRequestConfig = {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     section: {
+        [theme.breakpoints.down('sm')]: {
+            paddingLeft: '1em',
+            paddingTop: '0.5em',
+        },
         paddingTop: '1em',
         paddingLeft: '6em'
     },
