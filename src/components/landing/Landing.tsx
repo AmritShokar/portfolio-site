@@ -4,6 +4,7 @@ import { Box, Grid, Typography, makeStyles, createStyles, Theme } from '@materia
 import Weather from './Weather'
 
 import landing from '../../res/kelowna-landing-image-4.jpg'
+import landingMobile from '../../res/kelowna-landing-image-4-mobile.jpg'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -12,7 +13,10 @@ const useStyles = makeStyles((theme: Theme) =>
         backgroundImage: `url(${landing})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        marginTop: '3em'
+        marginTop: '3em',
+        [theme.breakpoints.down('sm')]: {
+            backgroundImage: `url(${landingMobile})`
+        },
     },
     greeting: {
         [theme.breakpoints.down('sm')]: {
