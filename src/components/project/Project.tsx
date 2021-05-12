@@ -11,7 +11,10 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     section: {
         backgroundColor: '#ADD8E6',
-        padding: '5em'
+        padding: '5em',
+        [theme.breakpoints.down('sm')]: {
+            padding: '2em'
+        }
     },
     title: {
         fontFamily: 'Ubuntu',
